@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">M2M</string>
+
+
+    <string name="style_square">square_box</string>
+    <string name="style_rounded">rounded_box</string>
+    <string name="style_underline">underline</string>
+    <string name="style_rounded_underline">rounded_underline</string>
+    <string name="mask_character">\u2022</string>
+    <string name="edit_info">Edit Info</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_category">Categories</string>
+    <string name="title_offer">Offers</string>
+    <string name="title_home">Home</string>
+    <string name="title_search">Search</string>
+    <string name="title_cart">Cart</string>
+    <string name="all_categories">All categories</string>
+    <string name="search_hint">Find something...</string>
+    <string name="out_of_stock_message">Out Of Stock</string>
+    <string name="verify_mobile_number_text">Verify mobile number</string>
+    <string name="didn_t_receive_otp_text">Didn\'t receive OTP?</string>
+    <string name="sign_up_to_proceed_text">Sign up to proceed</string>
+    <string name="_91">+91</string>
+    <string name="enter_your_number_hint_text">Enter your number</string>
+    <string name="description_text">Description</string>
+    <string name="i_accept_the_terms_of_use_privacy_policy"><![CDATA[I accept the Terms of Use & Privacy Policy]]></string>
+    <string name="m2m_products">M2M Products</string>
+    <string name="you_are_not_connected_to_internet_please_turn_on_your_cellular_data_wifi">You are not connected to internet. Please turn on your cellular data/Wifi.</string>
+    <string name="connection_interuptted">Connection\nInteruptted!</string>
+    <string name="oops_something_went_wrong">Oops! Something went wrong!</string>
+    <string name="no_internet_connection">No Internet Connection!</string>
+    <string name="do_you_really_want_to_logout">Do you really want to logout?</string>
+    <string name="how_would_you_like_to_contact">How would you like to contact?</string>
+    <string name="no_result_found_for_searched_keyword">No result found for searched keyword!</string>
+    <string name="add_new">Select Another Address</string>
+    <string name="title_activity_maps">MapsActivity</string>
+
+    <!-- Google Map API key -->
+    <string name="google_map_api_key">AIzaSyD8FIrtyHOLQxFsb5l7qLs4ceF5VgQdyEs</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="privacy_policy">Privacy Policy</string>
+
+</resources>

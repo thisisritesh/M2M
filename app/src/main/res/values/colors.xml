@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#3157B9</color>
+    <color name="purple_500">#3157B9</color>
+    <color name="purple_700">#3157B9</color>
+    <color name="teal_200">#3157B9</color>
+    <color name="teal_700">#3157B9</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="search_hint_color">#8E8E8E</color>
+
+    <color name="unselected_indicator_color">#8E8E8E</color>
+    <color name="selected_indicator_color">#3D4A9D</color>
+
+    <color name="next_slot_card_bg_color">#E1E5FF</color>
+    <color name="primary_text_color">#222222</color>
+    <color name="secondary_text_color">#8E8E8E</color>
+    <color name="shimmer_effect_bg_color">#A1A1A1</color>
+    <color name="offer_bg_start_color">#F44336</color>
+
+    <color name="whatsapp_green">#25D366</color>
+
+</resources>

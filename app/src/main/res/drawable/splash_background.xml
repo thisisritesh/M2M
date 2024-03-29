@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:top="0dp"
+        android:right="0dp"
+        android:bottom="0dp"
+        android:left="0dp"
+        android:drawable="@color/purple_500">
+    </item>
+
+    <item
+        android:drawable="@drawable/high_resolution_horizon_m2m_logo"
+        android:gravity="center"
+        android:width="320dp"
+        android:height="76dp">
+    </item>
+
+
+
+</layer-list>

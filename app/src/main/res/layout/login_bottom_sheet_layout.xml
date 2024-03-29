@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:viewBindingIgnore="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/close_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_round_close_24"
+        app:tint="@color/primary_text_color" />
+
+
+    <com.morning2morning.android.m2m.utils.customviews.BoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_up_to_proceed_text"
+        android:textSize="@dimen/heading_text_size"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/primary_text_color"/>
+
+    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login/Sign up to view your complete profile"
+        android:textSize="@dimen/small_text_size"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/secondary_text_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginVertical="24dp"
+        android:layout_height="wrap_content">
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/_91"
+            android:textSize="@dimen/body_text_size"
+            android:textColor="@color/primary_text_color"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"/>
+
+        <EditText
+            android:id="@+id/phone_number_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:inputType="phone"
+            android:hint="@string/enter_your_number_hint_text"
+            android:textSize="@dimen/body_text_size"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/resend_otp_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/body_text_size"
+            android:textColor="@color/secondary_text_color"
+            android:text="@string/didn_t_receive_otp_text"/>
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/body_text_size"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/purple_500"
+            android:text="Resend OTP"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/agree_to_terms_and_conditions_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/small_text_size"
+            android:text="@string/i_accept_the_terms_of_use_privacy_policy"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/continue_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:layout_margin="16dp"
+        android:enabled="false"
+        android:background="@drawable/curved_button_bg"/>
+
+</LinearLayout>

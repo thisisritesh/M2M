@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/product_image_view"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars"
+        android:contentDescription="@string/app_name" />
+
+    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+        android:id="@+id/title_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tender coconut"
+        android:layout_marginTop="4dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/primary_text_color"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/product_image_view" />
+
+    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+        android:id="@+id/quantity_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 pcs"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="@dimen/small_text_size"
+        app:layout_constraintStart_toStartOf="@+id/title_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/title_text_view" />
+
+    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+        android:id="@+id/discounted_price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="42"
+        android:textSize="@dimen/small_text_size"
+        android:textColor="@color/primary_text_color"
+        app:layout_constraintTop_toBottomOf="@id/quantity_text_view"
+        app:layout_constraintStart_toStartOf="@+id/title_text_view"/>
+
+    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+        android:id="@+id/original_price_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="50"
+        android:textSize="10sp"
+        android:textColor="@color/primary_text_color"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/discounted_price_text_view"
+        app:layout_constraintStart_toEndOf="@+id/discounted_price_text_view"
+        app:layout_constraintTop_toTopOf="@+id/discounted_price_text_view" />
+
+    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+        android:id="@+id/savings_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save rs 9"
+        android:textSize="10sp"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/purple_500"
+        app:layout_constraintBottom_toBottomOf="@+id/original_price_text_view"
+        app:layout_constraintStart_toEndOf="@+id/original_price_text_view"
+        app:layout_constraintTop_toTopOf="@+id/original_price_text_view" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/add_to_cart_custom_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/white_rounded_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/product_image_view"
+        app:layout_constraintEnd_toEndOf="@+id/product_image_view">
+
+        <ImageButton
+            android:id="@+id/add_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/circle_button_add_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/remove_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/add_button"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/remove_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/circle_button_remove_bg" />
+
+            <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                android:id="@+id/quantity_indicator_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="8dp"
+                android:text="9"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/body_text_size" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

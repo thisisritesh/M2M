@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="M2M does not have location access"
+        android:textSize="@dimen/body_text_size"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/primary_text_color"/>
+
+    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location helps us deliver to your address and show you relevent stores and offers"
+        android:textSize="@dimen/body_text_size"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/secondary_text_color"/>
+
+    <FrameLayout
+        android:id="@+id/positive_button_location_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/curved_button_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_my_location"/>
+
+            <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grant location access"
+                android:layout_margin="8dp"
+                android:layout_gravity="center"
+                android:textSize="@dimen/small_text_size"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/negative_button_location_request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/curved_button_outline_bg">
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add a new address"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/purple_500"/>
+
+    </FrameLayout>
+
+
+</LinearLayout>

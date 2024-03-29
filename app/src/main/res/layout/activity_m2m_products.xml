@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shimmer="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.m2mproducts.M2mProductsActivity">
+
+    <ImageButton
+        android:id="@+id/back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        android:background="@android:color/transparent"
+        app:tint="@color/purple_500"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:contentDescription="@string/app_name" />
+
+    <com.morning2morning.android.m2m.utils.customviews.BoldTextView
+        android:id="@+id/heading_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/primary_text_color"
+        android:textSize="@dimen/heading_text_size"
+        android:maxLines="1"
+        android:text="@string/m2m_products"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toBottomOf="@+id/back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back_arrow"
+        app:layout_constraintTop_toTopOf="@+id/back_arrow" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_category_details"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline5" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/recycler_view_category_details"
+        app:layout_constraintEnd_toEndOf="@id/recycler_view_category_details"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_category_details"/>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmer_view_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline5"
+        shimmer:duration="400">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/data_placeholder_search_result_layout" />
+
+            <include layout="@layout/data_placeholder_search_result_layout" />
+
+            <include layout="@layout/data_placeholder_search_result_layout" />
+
+            <include layout="@layout/data_placeholder_search_result_layout" />
+
+            <include layout="@layout/data_placeholder_search_result_layout" />
+
+            <include layout="@layout/data_placeholder_search_result_layout" />
+
+            <include layout="@layout/data_placeholder_search_result_layout" />
+
+            <include layout="@layout/data_placeholder_search_result_layout" />
+
+            <include layout="@layout/data_placeholder_search_result_layout" />
+
+            <include layout="@layout/data_placeholder_search_result_layout" />
+
+
+        </LinearLayout>
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <LinearLayout
+        android:id="@+id/error_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/something_went_wrong" />
+
+        <com.morning2morning.android.m2m.utils.customviews.BoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/oops_something_went_wrong"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/body_text_size" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/no_internet_connection_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline5">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/no_connection" />
+
+        <com.morning2morning.android.m2m.utils.customviews.BoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/oops_something_went_wrong"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/body_text_size" />
+
+    </LinearLayout>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cart_details_card"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_margin="16dp"
+        android:elevation="4dp"
+        app:cardBackgroundColor="@color/purple_500"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="8dp">
+
+            <ImageView
+                android:id="@+id/cart_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cart"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="16dp"
+                app:tint="@color/white"
+                android:contentDescription="@string/app_name"/>
+
+            <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                android:id="@+id/item_count_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/cart_icon"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/dot_seperator"
+                android:layout_width="4dp"
+                android:layout_height="4dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/dot_bg"
+                app:layout_constraintBottom_toBottomOf="@+id/item_count_text_view"
+                app:layout_constraintStart_toEndOf="@+id/item_count_text_view"
+                app:layout_constraintTop_toTopOf="@+id/item_count_text_view" />
+
+            <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                android:id="@+id/discounted_price_sum_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintBottom_toBottomOf="@+id/dot_seperator"
+                app:layout_constraintStart_toEndOf="@+id/dot_seperator"
+                app:layout_constraintTop_toTopOf="@+id/dot_seperator" />
+
+            <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                android:id="@+id/original_price_sum_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintBottom_toBottomOf="@+id/discounted_price_sum_text_view"
+                app:layout_constraintStart_toEndOf="@+id/discounted_price_sum_text_view"
+                app:layout_constraintTop_toTopOf="@+id/discounted_price_sum_text_view" />
+
+
+            <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                android:id="@+id/proceed_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="View Cart"
+                android:textColor="@color/white"
+                android:textSize="@dimen/small_text_size"
+                app:layout_constraintBottom_toBottomOf="@+id/proceed_image"
+                app:layout_constraintEnd_toStartOf="@+id/proceed_image"
+                app:layout_constraintTop_toTopOf="@+id/proceed_image" />
+
+            <ImageView
+                android:id="@+id/proceed_image"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="?attr/actionBarSize" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

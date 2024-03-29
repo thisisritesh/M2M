@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:viewBindingIgnore="true"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/close_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_round_close_24"
+        app:tint="@color/primary_text_color" />
+
+
+    <com.morning2morning.android.m2m.utils.customviews.BoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select your location"
+        android:textSize="@dimen/heading_text_size"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/primary_text_color"/>
+
+    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="This will be your delivery address, you can change it later."
+        android:textSize="@dimen/small_text_size"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/secondary_text_color"/>
+
+
+    <LinearLayout
+        android:id="@+id/select_your_current_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_my_location"
+            app:tint="@color/purple_500" />
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select your current location"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/small_text_size"
+            android:textColor="@color/purple_500"/>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/next_slot_bg"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/ic_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_location_on_24"
+            app:tint="@color/primary_text_color"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:contentDescription="@string/app_name" />
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:id="@+id/selected_location_text_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@color/primary_text_color"
+            app:layout_constraintStart_toEndOf="@+id/ic_location"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ic_location" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+        android:id="@+id/add_new_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/add_new"
+        android:drawableStart="@drawable/ic_baseline_add_location_alt_24"
+        android:layout_marginBottom="24dp"
+        android:gravity="center"
+        android:padding="8dp"
+        android:drawablePadding="8dp"
+        android:drawableTint="@color/purple_500"
+        android:layout_gravity="center"
+        android:textColor="@color/purple_500"
+        android:textSize="16sp" />
+
+
+
+</LinearLayout>

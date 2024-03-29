@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "953821986285",
+    "project_id": "consummate-gift-347210",
+    "storage_bucket": "consummate-gift-347210.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953821986285:android:802024e0419d923dea3be4",
+        "android_client_info": {
+          "package_name": "com.morning2morning.android.m2m"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "953821986285-8j1kaa358d087qilqoiomsktccpfu6v1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.morning2morning.android.m2m",
+            "certificate_hash": "91c564da61ea1dc383399e652cac64163ae24c53"
+          }
+        },
+        {
+          "client_id": "953821986285-45rp4ftmmeq3adfjfv9fi0eqm3b8erer.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJyd1-ktWD0asKgG5NqWVqotQnd719TLk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "953821986285-45rp4ftmmeq3adfjfv9fi0eqm3b8erer.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

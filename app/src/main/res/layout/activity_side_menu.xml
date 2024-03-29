@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".ui.sidemenu.SideMenuActivity">
+
+    <ImageButton
+        android:id="@+id/back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_ios_24"
+        android:background="@android:color/transparent"
+        app:tint="@color/purple_500"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/app_name" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp">
+
+                <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                    android:id="@+id/display_name_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hi, there!"
+                    android:layout_gravity="start|center_vertical"
+                    android:textSize="@dimen/heading_text_size"
+                    android:textColor="@color/primary_text_color"/>
+
+                <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                    android:id="@+id/edit_profile_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EDIT"
+                    android:textAllCaps="true"
+                    android:drawableTint="@color/purple_500"
+                    android:drawableEnd="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end|center_vertical"
+                    android:textSize="@dimen/body_text_size"
+                    android:textColor="@color/purple_500"/>
+
+            </FrameLayout>
+
+            <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                android:id="@+id/phone_number_text_view_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+91 70339332211"
+                android:drawablePadding="8dp"
+                android:textSize="@dimen/small_text_size"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textColor="@color/secondary_text_color"
+                android:drawableStart="@drawable/ic_baseline_local_phone_24"
+                android:drawableTint="@color/secondary_text_color"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                />
+
+            <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                android:id="@+id/email_text_view_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="jhondoe@gmail.com"
+                android:drawablePadding="8dp"
+                android:textSize="@dimen/small_text_size"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                android:textColor="@color/secondary_text_color"
+                android:drawableStart="@drawable/ic_baseline_email_24"
+                android:drawableTint="@color/secondary_text_color"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginVertical="16dp"
+                android:background="#DDDADA"/>
+
+            <FrameLayout
+                android:id="@+id/shop_by_category_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/category_colored"/>
+
+                    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Shop by category"
+                        android:layout_marginStart="16dp"
+                        android:textSize="@dimen/body_text_size"
+                        android:textColor="@color/secondary_text_color"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end|center_vertical"
+                    app:tint="@color/secondary_text_color" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/m2m_products_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/products"/>
+
+                    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="M2M products"
+                        android:layout_marginStart="16dp"
+                        android:textSize="@dimen/body_text_size"
+                        android:textColor="@color/secondary_text_color"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end|center_vertical"
+                    app:tint="@color/secondary_text_color" />
+
+            </FrameLayout>
+
+
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/blog"/>
+
+                    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Blogs and recipes"
+                        android:layout_marginStart="16dp"
+                        android:textSize="@dimen/body_text_size"
+                        android:textColor="@color/secondary_text_color"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end|center_vertical"
+                    app:tint="@color/secondary_text_color" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/store"/>
+
+                    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Store location"
+                        android:layout_marginStart="16dp"
+                        android:textSize="@dimen/body_text_size"
+                        android:textColor="@color/secondary_text_color"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end|center_vertical"
+                    app:tint="@color/secondary_text_color" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/about_us_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/info"/>
+
+                    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About us"
+                        android:layout_marginStart="16dp"
+                        android:textSize="@dimen/body_text_size"
+                        android:textColor="@color/secondary_text_color"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end|center_vertical"
+                    app:tint="@color/secondary_text_color" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/contact_us_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/support"/>
+
+                    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Contact us"
+                        android:layout_marginStart="16dp"
+                        android:textSize="@dimen/body_text_size"
+                        android:textColor="@color/secondary_text_color"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end|center_vertical"
+                    app:tint="@color/secondary_text_color" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/terms_and_conditions_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/terms"/>
+
+                    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/terms_conditions"
+                        android:layout_marginStart="16dp"
+                        android:textSize="@dimen/body_text_size"
+                        android:textColor="@color/secondary_text_color"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end|center_vertical"
+                    app:tint="@color/secondary_text_color" />
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/privacy_policy_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/privecy"/>
+
+                    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privacy_policy"
+                        android:layout_marginStart="16dp"
+                        android:textSize="@dimen/body_text_size"
+                        android:textColor="@color/secondary_text_color"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end|center_vertical"
+                    app:tint="@color/secondary_text_color" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/pricing_parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/pricing"/>
+
+                    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pricing"
+                        android:layout_marginStart="16dp"
+                        android:textSize="@dimen/body_text_size"
+                        android:textColor="@color/secondary_text_color"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end|center_vertical"
+                    app:tint="@color/secondary_text_color" />
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/log_out_root"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginEnd="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@mipmap/logout"/>
+
+                    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Logout"
+                        android:layout_marginStart="16dp"
+                        android:textSize="@dimen/body_text_size"
+                        android:textColor="@color/secondary_text_color"
+                        />
+
+
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+                    android:layout_gravity="end|center_vertical"
+                    app:tint="@color/secondary_text_color" />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

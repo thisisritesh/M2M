@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/close_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_gravity="end"
+        android:layout_margin="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_round_close_24"
+        app:tint="@color/primary_text_color" />
+
+
+    <com.morning2morning.android.m2m.utils.customviews.BoldTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/verify_mobile_number_text"
+        android:textSize="@dimen/heading_text_size"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/primary_text_color"/>
+
+    <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+        android:id="@+id/enter_the_otp_sent_to_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="Enter the OTP sent to +91 8851719808"
+        android:textColor="@color/secondary_text_color"
+        android:textSize="@dimen/small_text_size" />
+
+
+    <com.morning2morning.android.m2m.utils.customviews.OtpEditText
+        android:id="@+id/otp_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:clickable="false"
+        android:cursorVisible="false"
+        android:digits="0123456789"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textSize="20sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/normalTextView1"
+        app:oev_box_style="@string/style_rounded_underline"
+        app:oev_primary_color="@color/purple_500"
+        app:oev_secondary_color="#DADADA"
+        android:layout_marginVertical="24dp"
+        app:oev_text_color="@color/primary_text_color"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <LinearLayout
+        android:id="@+id/waiting_for_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="8dp"
+            android:layout_gravity="center"/>
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Waiting for OTP..."
+            android:layout_gravity="center"
+            android:textSize="@dimen/body_text_size"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resend_otp_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/body_text_size"
+            android:textColor="@color/secondary_text_color"
+            android:text="@string/didn_t_receive_otp_text"/>
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:id="@+id/resend_otp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/body_text_size"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/purple_500"
+            android:text="Resend OTP"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/time_count_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:id="@+id/otp_will_expire_in_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OTP will expire in"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="@dimen/body_text_size"
+            android:visibility="visible" />
+
+        <com.morning2morning.android.m2m.utils.customviews.RegularTextView
+            android:id="@+id/chronometer_otp_remaining_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/primary_text_color"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/continue_button_verify"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:layout_margin="16dp"
+        android:enabled="false"
+        android:background="@drawable/curved_button_bg"/>
+
+</LinearLayout>
